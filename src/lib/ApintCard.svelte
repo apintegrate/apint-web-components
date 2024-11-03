@@ -2,10 +2,10 @@
 <svelte:options customElement="apint-card" />
 
 <script>
-  const { title = "", image = "", bylineleft = "", bylineright = "", bylinerightimage = "", description = "", href = "", toplefttext = "" } = $props();
+  const { title = "", image = "", bylineleft = "", bylineright = "", bylinerightimage = "", description = "", href = "", toplefttext = "", height="", width="", maxWidth="", maxHeight="" } = $props();
 </script>
 
-<a href={href} class="card" target="_blank">
+<a href={href} class="card" style="height: {height}; width: {width}; max-width: {maxWidth}; max-height: {maxHeight}" target="_blank">
   <div class="card_top_detail">
     {toplefttext}
   </div>
@@ -42,10 +42,13 @@
       padding: 16px 20px;
       transition: box-shadow 0.2s ease 0s;
       width: 246px;
+      /* height: 370px; */
       margin: 14px;
       position: relative;
       font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
+
+
 
     .card:hover {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
@@ -112,7 +115,7 @@
       font-size: 13px;
       line-height: 20px;
       margin-top: 8px;
-      max-height: 80px;
+      /* max-height: 80px; */
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;

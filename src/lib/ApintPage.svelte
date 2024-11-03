@@ -4,11 +4,11 @@
 <script>
   import ApintHeader from "./ApintHeader.svelte";
 
-  const { title="Apint.org" } = $props();
+  const { title="Apint.org", icon="" } = $props();
 </script>
 
 <article>
-  <apint-header title={title}></apint-header>
+  <apint-header title={title} icon={icon}></apint-header>
 
   <section class="page">
     <slot />

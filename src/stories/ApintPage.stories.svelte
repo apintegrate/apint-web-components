@@ -24,7 +24,7 @@
 </Story>
 
 <Story name="Page with cards" args={{title: "test"}}>
-  <apint-page>
+  <apint-page title="News Zen" icon="https://images.vexels.com/media/users/3/130457/isolated/preview/089b7a0e56b2310538f82694adb27942-gefaltetes-zeitungssymbol.png">
     <section class="container_wrap">
       <h2>Birds</h2>
       <apint-card title="My test title" image="https://cdn.britannica.com/10/250610-050-BC5CCDAF/Zebra-finch-Taeniopygia-guttata-bird.jpg" description="My test description" href="https://google.com" toplefttext="2 Day(s) ago"></apint-card>
