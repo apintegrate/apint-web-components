@@ -35,3 +35,17 @@
   href: "https://google.com",
   toplefttext: "fds"
 }} />
+
+<Story name="CardWide" args={{
+  title: "My test titleMytestitle My testtitleMy test title My testtitle Mytest title Mytesttitle My test title My test title 2 My test title",
+  image: "https://cdn.britannica.com/10/250610-050-BC5CCDAF/Zebra-finch-Taeniopygia-guttata-bird.jpg",
+  bylineleft: "bylineleft",
+  bylinerightimage: "https://www.theguardian.com/favicon.ico",
+  bylineright: "bylineright fds fdsa fdsafdsa",
+  description: "My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description My test description",
+  href: "https://google.com",
+  toplefttext: "fds",
+  width: "84%",
+  height: "75vh",
+  heroImageStyle: ""
+}} />

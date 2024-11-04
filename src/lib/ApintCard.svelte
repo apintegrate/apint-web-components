@@ -2,14 +2,14 @@
 <svelte:options customElement="apint-card" />
 
 <script>
-  const { title = "", image = "", bylineleft = "", bylineright = "", bylinerightimage = "", description = "", href = "", toplefttext = "", height="", width="", maxWidth="", maxHeight="" } = $props();
+  const { title = "", image = "", bylineleft = "", bylineright = "", bylinerightimage = "", description = "", href = "", toplefttext = "", height="", width="", maxWidth="", maxHeight="", heroImageStyle="" } = $props();
 </script>
 
 <a href={href} class="card" style="height: {height}; width: {width}; max-width: {maxWidth}; max-height: {maxHeight}" target="_blank">
   <div class="card_top_detail">
     {toplefttext}
   </div>
-  <img src={image} alt="card" class="card_hero" />
+  <img src={image} alt="card" style={heroImageStyle} class="card_hero" />
   <div class="card_title">
     {title}
   </div>
@@ -35,7 +35,9 @@
     }
 
     .card {
-      display: block;
+      display: flex;
+      flex-flow: column;
+
       color: black;
       background-color: #fff;
       box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
@@ -46,9 +48,12 @@
       margin: 14px;
       position: relative;
       font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-clamp: 4;
+      column-width: 200vw;
     }
-
-
 
     .card:hover {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
@@ -71,37 +76,36 @@
     }
 
     .card_hero {
-      display: block;
+      height: 44%;
       border-radius: 7px;
       overflow: hidden;
       width: 100%;
-      height: 144px;
       line-height: 0;
-      margin: 0 0px;
       object-fit: cover;
+      object-position: 0% 20%;
     }
 
     .card_title {
       margin-top: 10px;
       font-size: 18px;
       font-weight: 500;
-      max-height: 70px;
-      overflow: hidden;
       text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
+
+      /* overflow: hidden; 
+      text-overflow: ellipsis;
+      white-space: nowrap; */
     }
 
     .card_byline {
+      height: 34px;
       margin-top: 2px;
       margin-right: 1px;
       font-size: 13px;
       font-weight: 300;
       color: rgb(0,0,0,.66);
-      white-space: nowrap;
+      /* white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      text-overflow: ellipsis; */
     }
 
     .card_byline_right_image {
@@ -111,16 +115,13 @@
     }
 
     .card_description {
+      height: 54%;
+
       color: #444746;
       font-size: 13px;
       line-height: 20px;
       margin-top: 8px;
-      /* max-height: 80px; */
       overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
     }
 
     .card_footer {
